@@ -72,7 +72,7 @@ h5{
     color:var(--GrayishBlue)
 }
 
-p,a{
+p, a{
     color:var(--GrayishBlue);
     width:85%;
     font-size:.9rem;
@@ -81,8 +81,13 @@ p,a{
 
 
 /*================================= HEADER =================================*/
-
 header{
+    background-color: var(--VeryLightGray);
+    position: relative;
+    z-index: 10;
+    margin:auto;
+}
+.header-container{
     position: relative;
     z-index: 10;
     width:100%;
@@ -95,8 +100,9 @@ header{
     background-color: var(--VeryLightGray);
 }   
 
-header .logo{
+.logo{
     width:45%;
+    max-width: 150px;
     /* justify-self: flex-start; */
     margin:0;
 }
@@ -108,11 +114,68 @@ header .logo{
 }
 
 #mobile-menu{
+    /* display: none; */
+    position:absolute;
+    /* border:1px solid red;*/
+    left:5%;
+    right: 5%;
+    top:-1000%;
+    margin:1em;
+    margin-top: 2em;
+    padding:1em 3em;
+    background-color: var(--VeryLightGray); 
+    border-radius: 5px;
+    box-shadow: 1px 10px 37px -6px rgba(0,0,0,0.75);
+    text-align: center;
+    transition-property: top;
+    transition-duration: 300ms;
+}
+
+#desktop-menu{
     display: none;
+}
+
+#mobile-menu li{
+    margin-bottom: 1em;
+}
+
+#mobile-menu a{
+    text-decoration: none;
+    color:#000
 }
 
 #landing-button{
     display: none;
+}
+
+@media screen and (min-width: 1440px) {
+    .header-container{
+        width: 85%;
+        margin:auto;
+    }
+
+    .hamburguer{
+        display: none;
+    }
+
+    nav{
+        width:35%;  
+    }
+
+    #mobile-menu{
+        display: none;
+    }
+
+    #desktop-menu{
+        display: flex;
+        /* border: 1px solid red; */
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #landing-button{
+        display: initial;
+    }
 }
 
 /*================================= LANDING =================================*/
@@ -126,7 +189,14 @@ header .logo{
     margin-bottom: 2em;
 }
 
+.landing-row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #landing img{
+    max-width: 650px;
     order: -1;
     position: relative;
     z-index: 5;
@@ -145,6 +215,24 @@ header .logo{
     font-size:1rem;
     padding:.7em 1.5em;
     background:linear-gradient(90deg, hsl(136deg 65% 51%), hsl(192deg 70% 51%));
+}
+
+@media  screen and (min-width:1440px) {
+    #landing{
+        flex-direction: row;
+    }
+
+    .landing-row h1, .landing-row p{
+        text-align: left;
+    }
+
+    #landing img{
+        order: initial;
+        background-image: url(../images/bg-intro-desktop.svg);
+        background-position: center;
+        background-size: contain;
+    }
+    
 }
 
 
@@ -169,6 +257,7 @@ header .logo{
 
 #benefits div img{
     width:20%;
+    max-width: 80px;;
     order:-1;
 }
 
@@ -184,6 +273,7 @@ article{
 }
 
 article img{
+    max-width: 200px;
     order: -10;
     margin-bottom: 1em;
 }
@@ -208,6 +298,7 @@ article p{
 
 /*================================= FOOTER ==============================================*/
 footer{
+    padding:1em;
     background-color: var(--DarkBlue);
     display: flex;
     flex-direction: column;
@@ -215,8 +306,8 @@ footer{
     align-items: center;
 }
 
-footer img{
-    width:40%;
+#footer_logo{
+    width:35%;
     margin:1em 0;
 }
 
@@ -232,7 +323,7 @@ footer ul{
 }
 
 #social i{
-    font-size:1.5rem;
+    font-size:1.3rem;
     color:white;
 }
 

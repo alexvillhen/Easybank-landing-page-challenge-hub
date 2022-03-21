@@ -25,31 +25,48 @@
 </head>
 <body>
   <main>
+
+    <!-- =================================================HEADER================================================= -->
     <header>
-      <img class="logo" src="./images/logo.svg" alt="logo">
-      <img class="hamburguer" src="./images/icon-hamburger.svg" alt="menu-icon">
-      <nav>
-        <ul id="mobile-menu">
-          <li><a href="/home">home</a></li>
-          <li><a href="/About">About</a></li>
-          <li><a href="/Contact">Contact</a></li>
-          <li><a href="/Blog">Blog</a></li>
-          <li><a href="/Careers">Careers</a></li>
-        </ul>
-      </nav>
-      <button class="request" id="landing-button">Request Invite</button>
+      <div class="header-container">
+        <img class="logo" src="./images/logo.svg" alt="logo">
+        <img class="hamburguer" src="./images/icon-hamburger.svg" alt="menu-icon">
+        <nav>
+          <ul id="mobile-menu">
+            <li><a href="/home">home</a></li>
+            <li><a href="/About">About</a></li>
+            <li><a href="/Contact">Contact</a></li>
+            <li><a href="/Blog">Blog</a></li>
+            <li><a href="/Careers">Careers</a></li>
+          </ul>
+
+          <ul id="desktop-menu">
+            <li><a href="/home">home</a></li>
+            <li><a href="/About">About</a></li>
+            <li><a href="/Contact">Contact</a></li>
+            <li><a href="/Blog">Blog</a></li>
+            <li><a href="/Careers">Careers</a></li>
+          </ul>
+        </nav>
+        <button class="request" id="landing-button">Request Invite</button>
+      </div>
     </header>
 
+    <!-- =================================================LANDING================================================= -->
     <section id="landing">
-      <h1>Next generation digital banking</h1>
-  
-      <p>Take your financial life online. Your Easybank account will be a one-stop-shop 
-      for spending, saving, budgeting, investing, and much more.</p>
-      <button class="request">Request Invite</button>
+      <div class="landing-row">
+        <h1>Next generation digital banking</h1>
+    
+        <p>Take your financial life online. Your Easybank account will be a one-stop-shop 
+        for spending, saving, budgeting, investing, and much more.</p>
+        <button class="request">Request Invite</button>
+      </div>
 
       <img id="landing-image" src="./images/image-mockups.png" alt="image-mockups">
     </section>
 
+
+    <!-- =================================================BENEFITS================================================= -->
     <section id="benefits">
       <h2>Why choose Easybank?</h2>
   
@@ -86,6 +103,7 @@
     </section>
     
 
+    <!-- =================================================ARTICLES================================================= -->
     <section id="articles">
       <h2>Latest Articles</h2>
       
@@ -140,8 +158,10 @@
     </section>
   </main>
 
+
+  <!-- =================================================FOOTER================================================= -->
   <footer>
-    <img src="./images/logo - white (2).svg" alt="logo">
+    <img class="logo" id="footer_logo" src="./images/logo - white (2).svg" alt="logo">
 
     <ul id="social">
       <li> <a href="#"><i class="fa-brands fa-facebook-square"></i></a> </li>
